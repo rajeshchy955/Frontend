@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    .wrapper {
+      padding: 20px;
+    }
+    .input-box {
+      margin-bottom: 15px;
+    }
+    input, textarea, select {
+      width: calc(100% - 22px); 
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    footer {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      margin-right: 10px;
+    }
+    .btn-submit {
+      background-color: green;
+    }
+    .btn-cancel {
+      background-color: red;
+    }
+    #previewImage {
+      max-width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Admin</a></li>
+      </ul>
+    </nav>
+  </header>  
+  <div class="wrapper">
+    <section>
+      <form action="">
+        <div class="input-box">
+          <input type="text" placeholder="News Title" required>
+        </div>
+        <div class="input-box">
+          <textarea placeholder="News Text" required></textarea>
+        </div>
+        <div class="input-box">
+          <select required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="category1">National</option>
+            <option value="category2">Sports</option>
+            <option value="category3">Multimedia</option>
+            <option value="category4">Technologies</option>
+            <option value="category5">Study</option>
+            <option value="category6">Vacancy</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="imageInput">Insert Image:</label>
+          <input type="file" id="imageInput" accept="image/*">
+          <img id="previewImage" src="#" alt="Image Preview">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Label" required>
+        </div>
+        <div class="input-box">
+          <input type="date" required>
+        </div>
+        <footer>
+          <button type="submit" class="btn-submit">Submit</button>
+          <button type="button" class="btn-cancel" onclick="window.location.href='index.html'">Cancel</button>
+        </footer>
+      </form>
+    </section>
+  </div>
+
+  
